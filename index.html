@@ -55,7 +55,8 @@
 <link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox.js/plugins/mapbox-directions.js/v0.1.0/mapbox.directions.css' type='text/css' />
 
 
-
+<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/mapbox-directions.js/v0.1.0/mapbox.directions.js'></script>
+<link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox.js/plugins/mapbox-directions.js/v0.1.0/mapbox.directions.css' type='text/css' />
 
 
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
@@ -73,10 +74,10 @@
 L.mapbox.accessToken = 'pk.eyJ1Ijoic2hyYXZhbjE5OTEiLCJhIjoiMTdBSHFPbyJ9.TOW1Gw15YndOtIHl3_oiKw';
 var map = L.mapbox.map('map', 'shravan1991.cd791dbd')
     .setView([-43.5494, -187.3207], 12).addControl(L.mapbox.geocoderControl('mapbox.places', {
-        autocomplete: true})).on('ready', function() {
-        new L.Control.MiniMap(L.mapbox.tileLayer('shravan1991.cd791dbd'))
+        autocomplete: true}))
+    /*.on('ready', function() { new L.Control.MiniMap(L.mapbox.tileLayer('shravan1991.cd791dbd'))
             .addTo(map);	
-        });
+        });*/
     var hash = L.hash(map);
 
     //directions
