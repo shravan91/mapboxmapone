@@ -13,7 +13,7 @@
 </head>
 <body>
 
-	
+	/*Scripts*/
 
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-minimap/v1.0.0/Control.MiniMap.js'></script>
@@ -24,9 +24,7 @@
 <script>
 L.mapbox.accessToken = 'pk.eyJ1Ijoic2hyYXZhbjE5OTEiLCJhIjoiMTdBSHFPbyJ9.TOW1Gw15YndOtIHl3_oiKw';
 var map = L.mapbox.map('map', 'shravan1991.cd791dbd')
-.on('ready', function() {
-        new L.Control.MiniMap(L.mapbox.tileLayer('examples.map-i86nkdio'))
-            .addTo(map).setView([-43.5494, -187.3207], 12).addControl(L.mapbox.geocoderControl('mapbox.places', {
+    .setView([-43.5494, -187.3207], 12).addControl(L.mapbox.geocoderControl('mapbox.places', {
         autocomplete: true}));
     var hash = L.hash(map);
 </script>
