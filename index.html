@@ -7,8 +7,8 @@
 <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
 <style>
   body { margin:0; padding:0; }
-  #map { position:absolute; top:0; bottom:0; width:100%; }
-
+  #map-container { position:relative; height: 600px; width:100%; }
+#map { width: 100%; height: 600px; }
 </style>
 
 
@@ -20,12 +20,13 @@
     width: 33.3333%;
     max-width: 300px;
     min-width: 200px;
+    height: 600px;
 }
 
 #inputs {
     z-index: 10;
-    top: 10px;
-    left: 10px;
+top: 38px;
+left: 47px;
 }
 
 #directions {
@@ -62,19 +63,23 @@
 <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-minimap/v1.0.0/Control.MiniMap.css' rel='stylesheet' /> -->
 </head>
 <body>
+<div align="center"><h2>Christchurch Bus Stops and Walking Directions</h2></div>
 
+<div id='map-container'>
 <div id='map'></div>
 <div id='inputs'></div>	
 <div id='errors'></div>
 <div id='directions'>
   <div id='routes'></div>
-  <div id='instructions'></div>
+  <div id='instructions'></div></div></div>
+  <div align="center">Made with <a href="http://www.mapbox.com">Mapbox JS</a>
 </body>
 <script>
 L.mapbox.accessToken = 'pk.eyJ1Ijoic2hyYXZhbjE5OTEiLCJhIjoiMTdBSHFPbyJ9.TOW1Gw15YndOtIHl3_oiKw';
 var map = L.mapbox.map('map', 'shravan1991.cd791dbd')
-    .setView([-43.5494, -187.3207], 12).addControl(L.mapbox.geocoderControl('mapbox.places', {
-        autocomplete: true}))
+    .setView([-43.5494, -187.3207], 12)
+    /*.addControl(L.mapbox.geocoderControl('mapbox.places', {
+        autocomplete: true}))*/
     /*.on('ready', function() { new L.Control.MiniMap(L.mapbox.tileLayer('shravan1991.cd791dbd'))
             .addTo(map);	
         });*/
