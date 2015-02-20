@@ -26,7 +26,7 @@ L.mapbox.accessToken = 'pk.eyJ1Ijoic2hyYXZhbjE5OTEiLCJhIjoiMTdBSHFPbyJ9.TOW1Gw15
 var map = L.mapbox.map('map', 'shravan1991.cd791dbd')
     .setView([-43.5494, -187.3207], 12).addControl(L.mapbox.geocoderControl('mapbox.places', {
         autocomplete: true})).on('ready', function() {
-        new L.Control.MiniMap(L.mapbox.tileLayer('examples.map-i86nkdio'))
+        new L.Control.MiniMap(L.mapbox.tileLayer('shravan1991.cd791dbd'))
             .addTo(map);
         });
     var hash = L.hash(map);
