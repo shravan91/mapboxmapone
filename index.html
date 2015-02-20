@@ -13,11 +13,13 @@
 </head>
 <body>
 
+
+
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-minimap/v1.0.0/Control.MiniMap.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-minimap/v1.0.0/Control.MiniMap.css' rel='stylesheet' />
 
-<div>Christchurch City Bus Stops</div>
+
 <div id='map'></div>
 <script>
 L.mapbox.accessToken = 'pk.eyJ1Ijoic2hyYXZhbjE5OTEiLCJhIjoiMTdBSHFPbyJ9.TOW1Gw15YndOtIHl3_oiKw';
@@ -28,7 +30,6 @@ var map = L.mapbox.map('map', 'shravan1991.cd791dbd')
             .addTo(map);
         });
     var hash = L.hash(map);
-    <div>Made by Shravan Shah using <a href="www.mapbox.com">Mapbox JS</a></div>
 </script>
 
 
